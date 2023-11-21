@@ -7,7 +7,7 @@ export const ImageGallery = ({ imagesArr }) => {
       {imagesArr.map(el => (
         <ImageGalleryItem
           source={el.webformatURL}
-          alternative={el.id}
+          alternative={el.tags}
           key={el.id}
         />
       ))}
