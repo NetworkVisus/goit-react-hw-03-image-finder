@@ -16,7 +16,7 @@ export class Modal extends Component {
     document.removeEventListener('keydown', this.handleEsc);
   }
   render() {
-    const { image, modalClose } = this.props;
+    const { image } = this.props;
     return (
       <Styled.Overlay onClick={this.backDropClose}>
         <Styled.Modal>
