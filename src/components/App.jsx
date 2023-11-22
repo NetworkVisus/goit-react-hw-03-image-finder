@@ -86,6 +86,12 @@ export class App extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const searchQueryValue = e.target.elements.searchQuery.value.trim();
+    if (searchQueryValue === '') {
+      alert(
+        "Seems like, you haven't entered anything, please, write your query"
+      );
+      return;
+    }
     this.setState(prev => ({
       searchQuery: searchQueryValue,
       isGalleryLoaded: false,
